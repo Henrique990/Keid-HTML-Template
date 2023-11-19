@@ -1,0 +1,35 @@
+@import "../helpers/functions";
+// Global Variables
+
+// ----------- for cross over browser css -----------
+$experimental    			: true !default;
+
+// ----------- Color -------------------
+$default-color 				: #c5cdb6 !default;
+$default-color-hover		: #dde2d4 !default;
+
+$blue-color 				: #03afff !default;
+$blue-color-hover			: #50c7ff !default;
+
+$green-color 				: #9ac23d !default;
+$green-color-hover			: #b8d477 !default;
+
+$yellow-color 				: #e6ae48 !default;
+$yellow-color-hover			: #f7c468 !default;
+
+$red-color 					: #ff4444 !default;
+$red-color-hover			: #ff9191 !default;
+
+$white-color 				: #fafafa !default;
+$white-color-hover			: #eeeeee !default;
+
+$gray-color 				: #a0a0a0 !default;
+$gray-color-hover			: #c6c6c6 !default;
+
+$color-default 				: ($default-color, $default-color-hover);
+$color-blue 				: ($blue-color, $blue-color-hover);
+$color-green 				: ($green-color, $green-color-hover);
+$color-yellow 				: ($yellow-color, $yellow-color-hover);
+$color-red 					: ($red-color, $red-color-hover);
+$color-white 				: ($white-color, $white-color-hover);
+$color-gray 				: ($gray-color, $gray-color-hover);

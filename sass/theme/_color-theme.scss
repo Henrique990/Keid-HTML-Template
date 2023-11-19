@@ -1,0 +1,522 @@
+/* --------------------------------------------------------------------------
+ *
+ * file           : theme-switcher.css
+ * Desc           : Foundstrap Theme Switcher
+ * Author         : Imam Firmansyah
+ * Author URI     : http://imamfirmansyah.com
+ * Email          : imamfirmansyah27@gmail.com
+ *
+ * Copyright 2014. All Rights Reserved.
+ * -------------------------------------------------------------------------- */
+
+@import "compass/css3";
+
+$color-default 	: lower-bound($color-theme);
+$color-hover 	: upper-bound($color-theme);
+
+@mixin bg-color-extend {
+	background-color: $color-default;
+}
+
+@mixin bg-color-hover-extend {
+	background-color: $color-hover;
+}
+
+@mixin color-extend {
+	color: $color-default;
+}
+
+@mixin color-hover-extend {
+	color: $color-hover;
+}
+
+::selection {
+	background-color: $color-default;
+}
+
+::-moz-selection {
+	background-color: $color-default;
+}
+
+%bg-color 		{ @include bg-color-extend; }
+%bg-color-hover	{ @include bg-color-hover-extend; }
+%color 			{ @include color-extend; }
+%color-hover 	{ @include color-hover-extend; }
+
+a:hover {
+	@extend %color-hover;
+}
+
+.slideshow .tp-bannertimer {
+	background: rgba(lower-bound($color-theme), 0.5);
+}
+
+#me-header.header-transparent .me-menu a.active, 
+#me-header.header-transparent .me-menu a.current, 
+#me-header.header-transparent .me-menu a:hover, 
+#me-header.header-transparent .me-menu a:focus, 
+#me-header.header-transparent .me-menu a:active, 
+#me-header.header-transparent .me-menu a.highlighted {
+	color: lower-bound($color-theme);
+}
+
+#me-header.header-style1 .me-menu a.active, 
+#me-header.header-style1 .me-menu a.current, 
+#me-header.header-style1 .me-menu a:hover, 
+#me-header.header-style1 .me-menu a:focus, 
+#me-header.header-style1 .me-menu a:active, 
+#me-header.header-style1 .me-menu a.highlighted {
+	@extend %bg-color;	
+}
+
+#me-header.header-style1 .me-menu ul a.active, 
+#me-header.header-style1 .me-menu ul a.current, 
+#me-header.header-style1 .me-menu ul a:hover, 
+#me-header.header-style1 .me-menu ul a:focus, 
+#me-header.header-style1 .me-menu ul a:active,
+#me-header.header-style1 .me-menu ul a.highlighted {
+	color: lower-bound($color-theme) !important;
+}
+
+#me-header.header-style2,
+#me-header.header-style4 {
+	.me-menu {
+		a {
+			&.active, 
+			&.current, 
+			&:hover, 
+			&:focus, 
+			&:active, 
+			&.highlighted {
+				color: lower-bound($color-theme);
+			}
+		}
+	}
+}
+
+#me-header.header-style3 { 
+	.header-under-container {
+		background: rgba(lower-bound($color-theme), 0.75);
+	}
+}
+
+.me-menu span.scroll-up:hover span.scroll-up-arrow:after,
+.me-menu span.scroll-down:hover span.scroll-down-arrow:after  {
+  color: upper-bound($color-theme);
+}
+
+.slideshow .slider1-separator:before,
+.slideshow .button-slider-group {
+	@extend %bg-color;
+}
+
+.slideshow .button-slider-group .button-icon {
+	background: darken(lower-bound($color-theme), 8%);
+}
+
+.slideshow .restaurant-slider1-caption1 {
+	@extend %color;
+}
+
+#slideshow-container {
+	.tp-rightarrow.default:hover:before,
+	.tp-leftarrow.default:hover:before {
+		color: upper-bound($color-theme);
+	}
+}
+
+#scrollUp,
+.heading-title:after,
+.slideshow .slider3-caption2,
+.masonry-no-image,
+.masonry-overlay.keid-overlay {
+	@extend %bg-color;
+}
+
+#scrollUp {
+	&:hover, &:focus {
+		@extend %bg-color-hover;
+	}
+}
+.button {
+	@extend %bg-color;
+	&:hover, &:focus {
+		@extend %bg-color-hover;
+	}
+
+	&.link:hover {
+		@extend %color-hover;
+	}
+}
+
+.button.button-icon-right,
+.button.button-icon-left { 
+	.button-icon {
+		background: darken(lower-bound($color-theme), 8%);
+	}
+
+	&:hover {
+		.button-icon {
+			@extend %bg-color-hover;
+		}
+	}
+}
+
+.button.button-app {
+	&.link {
+		&:hover {
+			@extend %color-hover;
+		}
+	}
+}
+
+.list-color li:before {	
+	color: lower-bound($color-theme) !important;
+}
+
+.form-control:focus {
+   border-color: lower-bound($color-theme);
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(lower-bound($color-theme), 0.6);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(lower-bound($color-theme), 0.6);
+}
+
+.me-menu a:hover span.sub-arrow:after,
+.me-menu a:focus span.sub-arrow:after,
+.me-menu a:active span.sub-arrow:after,
+.me-menu a.highlighted span.sub-arrow:after {
+  color: upper-bound($color-theme);
+}
+
+.icon-shape i, 
+.icon-shape span, 
+.text-shape i, 
+.text-shape span,
+.keid-color,
+.post-item i {
+	@extend %color;
+}
+
+.button.button-border {
+	border: 1px solid lower-bound($color-theme);
+	color: lower-bound($color-theme);
+	&:hover {
+		@extend %bg-color;
+	}
+}
+
+.post-item {
+	.post-title-item {
+		&:hover {
+			* {
+				@extend %color-hover;
+			}
+		}
+	}
+}
+
+.progress-bar .progress-content,
+.me-panel.fold {
+	@extend %bg-color;
+}
+
+.me-panel.fold {
+	&:before{ border-color: #f6f6f6 darken(lower-bound($color-theme), 20%) #f6f6f6 #f6f6f6; }
+}
+
+.twitter-feed .twitter-text a, 
+.twitter-feed .twitter-text .at {
+	@extend %color;
+	&:hover {
+		@extend %color-hover;
+	}
+}
+
+.icon-shape.circle, 
+.icon-shape.square, 
+.icon-shape.radius, 
+.text-shape.circle, 
+.text-shape.square, 
+.text-shape.radius,
+.pricing-table .price,
+.menu-trigger {
+	@extend %bg-color;
+}
+
+.text-shape.stroke,
+.icon-shape.stroke {
+	border: 2px solid lower-bound($color-theme);
+	background: transparent;
+	i, span {
+		@extend %color;
+	}
+}
+
+.pricing-table.pricing-style2 {
+	border: 5px solid lower-bound($color-theme);
+}
+
+.menu-trigger.active {	
+	@extend %bg-color-hover;
+}
+
+.me-menu a:hover, 
+.me-menu a:focus, 
+.me-menu a:active, 
+.me-menu a.highlighted,
+.me-menu a.active, 
+.me-menu a.current, 
+.me-menu a.current:hover, 
+.me-menu a.current:focus, 
+.me-menu a.current:active {
+	@extend %color-hover;
+}
+
+.me-menu ul a:hover, 
+.me-menu ul a:focus, 
+.me-menu ul a:active, 
+.me-menu ul a.highlighted {
+	@extend %color-hover;
+}
+
+.me-menu .mega-menu-list li a:hover, 
+.me-menu .mega-menu-list li a:focus, 
+.me-menu .mega-menu-list li a:active {
+	color: upper-bound($color-theme) !important;
+}
+
+.pricing-table.pricing-style3.featured-pricing {
+	border-color: upper-bound($color-theme);
+}
+
+.slideshow-app {
+	background-color: darken(lower-bound($color-theme), 20%);
+}
+
+.pricing-table.pricing-style3:after {
+	@extend %bg-color;
+}
+
+.pricing-table.pricing-style3 .bullet-item:before,
+h4.resp-accordion i, .resp-tabs-list li i {
+	@extend %color;
+}
+
+.keid-section,
+.me-breadcrumb > .active a,
+blockquote cite span {
+	@extend %bg-color;
+}
+
+.keid-section .heading-title:after,
+.me-breadcrumb a:hover {
+	@extend %bg-color-hover;
+}
+
+.resp-tabs-list li:hover, 
+h4.resp-accordion:hover, 
+h4.resp-accordion.resp-tab-active, 
+h4.resp-accordion.resp-tab-active:hover, 
+h4.resp-accordion.resp-tab-active:active, 
+.resp-tabs-list li.resp-tab-active, 
+.resp-tabs-list li.resp-tab-active:hover, 
+.resp-tabs-list li.resp-tab-active:active {
+	background: lower-bound($color-theme);
+	border: 1px solid lower-bound($color-theme);
+}
+
+.testimonial-description span,
+.me-team span,
+.me-team .social-icon a {
+	@extend %bg-color;
+}
+
+.pricing-table .title,
+.me-team .social-icon a:hover {
+	@extend %bg-color-hover;
+}
+
+.blog-carousel-nav .left-nav, .blog-carousel-nav .right-nav {
+	&:hover i {
+		@extend %color-hover;
+	}
+}
+
+.blog-info .date-blog-info,
+.pagination li.active a {
+	border-color: lower-bound($color-theme);
+}
+
+.pagination li a:hover, 
+.pagination li.active a:hover {
+	border-color: upper-bound($color-theme);
+}
+
+.category-list a:hover, 
+.popular-list a:hover,
+.archive-list a:hover,
+.blog-author .author-link:hover {
+	@extend %color-hover;
+}
+
+.popular-list a,
+.blog-author .author-link {
+	@extend %color;
+}
+
+.me-artice .social-icon a,
+.badge,
+.comment-text .reply,
+.tag-cloud a {
+	@extend %bg-color;
+}
+
+.pagination li a:hover, 
+.pagination li.active a:hover,
+.tag-cloud a:hover {
+	@extend %bg-color-hover;
+}
+
+.image-content .img-overlay,
+.me-image .image-caption:after {
+	@extend %bg-color;
+}
+
+.list-circle-check a:hover,
+.list-arrow a:hover, 
+.list-arrow-circle a:hover, 
+.list-no-bullet a:hover, 
+.list-disc a:hover, 
+.list-square a:hover, 
+.list-number a:hover,
+.blog-link a:hover {
+	@extend %color-hover;
+}
+
+.portfolio-filter .button:hover {
+	@extend %bg-color-hover;
+}
+
+.portfolio-filter .button.selected {
+	@extend %bg-color;
+}
+
+.mejs-audio .mejs-controls .mejs-time-rail .mejs-time-current {
+	@extend %bg-color;
+}
+
+.pagination li.active a,
+.table th,
+.promo-box:before,
+.highlight,
+.dropcap.circle, 
+.dropcap.square {
+	@extend %bg-color;
+}
+
+.restaurant-reservation-form fieldset,
+.restaurant-reservation-form .form-control {
+	border-color: lower-bound($color-theme);
+}
+
+.me-tab-big .resp-tabs-list li.resp-tab-active, .me-tab-big .resp-tabs-list li:hover {
+	@extend %bg-color;
+}
+
+.me-tab-big .resp-tabs-list li.resp-tab-active {
+	&:after {
+		border-color: lower-bound($color-theme) transparent transparent transparent;
+	}
+}
+
+.me-testimonial.testimonial-style3 img {
+	border-color: lower-bound($color-theme);
+}
+
+.pricing-table.pricing-style4 .cta-button {
+	@extend %bg-color;
+}
+
+.chosen-container .chosen-results li.highlighted,
+.panel-talk,
+.medical-open,
+.me-testimonial.testimonial-style2 .testimonial-text,
+.medical-schedule,
+.medical-parallax {
+	@extend %bg-color;
+}
+
+.me-testimonial.testimonial-style3 .testimonial-description span,
+.me-testimonial.testimonial-style2 .testimonial-description span {
+	@extend %color;
+}
+
+
+
+.form-reservation {
+	@extend %bg-color;
+	.form-control,
+	.chosen-container-single .chosen-single {
+		border: 2px solid darken(lower-bound($color-theme), 10%);
+	}
+}
+
+#me-header.header-style3 .phone-number {
+	border-color: lower-bound($color-theme);
+	@extend %color;
+}
+
+#me-header.header-style3 .me-menu a.active, 
+#me-header.header-style3 .me-menu a:hover {
+	color: darken(lower-bound($color-theme), 15%) !important;
+}
+
+#me-header.header-style4 .header-box,
+.photography-contact-container .form-control {
+	border-color: lower-bound($color-theme);
+}
+
+.header-widget,
+.hotel-room .room-facilities {
+	@extend %bg-color;
+}
+
+.datepicker {
+	td.active,
+	td.active:hover {
+		background: lower-bound($color-theme) !important;
+	}
+
+	td span.active:hover,
+	td span.active:focus, 
+	td span.active:active, 
+	td span.active.active, 
+	td span.active.disabled, 
+	td span.active[disabled],
+	td.active:hover, 
+	td.active:hover:hover, 
+	td.active:focus,
+	td.active:hover:focus, 
+	td.active:active, 
+	td.active:hover:active, 
+	td.active.active, 
+	td.active:hover.active, 
+	td.active.disabled, 
+	td.active:hover.disabled, 
+	td.active[disabled],
+	td.active:hover[disabled] {
+		background: lower-bound($color-theme) !important;
+	}
+}
+
+@media only screen and (max-width: 959px) {
+	#me-header.header-style1 {
+		.me-menu a.active, 
+		.me-menu a.current, 
+		.me-menu a:hover, 
+		.me-menu a:focus, 
+		.me-menu a:active, 
+		.me-menu a.highlighted {
+			color: lower-bound($color-theme) !important;
+		}
+	}
+}
